@@ -42,5 +42,12 @@ void PrintPrimeNumbersFrom1ToN(int N)
 }
 int main()
 {
-  PrintPrimeNumbersFrom1ToN(ReadPositiveNumber("please enter positive number."));
+  char again = 'y';
+  do
+  {
+    system("cls");
+    PrintPrimeNumbersFrom1ToN(ReadPositiveNumber("please enter positive number."));
+    cout << "\n========================\n\ndo this again yes or no [y/n] \n\n";
+    cin >> again;
+  } while (again == 'y' || again == 'Y');
 }
